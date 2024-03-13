@@ -1,4 +1,5 @@
 # I will be making a quiz program in Python.
+# Will add up to 10 questions.
 name = input("What's your name? ")
 
 QUESTIONS = {
