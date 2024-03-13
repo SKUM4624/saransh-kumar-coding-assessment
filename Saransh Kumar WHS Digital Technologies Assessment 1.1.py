@@ -26,6 +26,6 @@ for question, alternatives in QUESTIONS.items():
 
     answer = input(f"{question}? ")
     if answer == correct_answer:
-        print("Correct!")
+        print("Correct! Good job, on to the next question!")
     else:
-        print(f"The answer is {correct_answer!r}, not {answer!r}")
+        print(f"The answer is {correct_answer!r}, not {answer!r}! Try again next time! On to the next question!")
