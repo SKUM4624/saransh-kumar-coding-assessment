@@ -1,15 +1,16 @@
-## will be making a program where you ask questions to the computer and it responds back with different answers and questions.
+# I will be making a quiz program in Python.
 QUESTIONS = {
     "When was the first known use of the word 'quiz'": [
-        "1781", "1771", "1871", "1881"
+        "Choices:", "1781", "1771", "1871", "1881"
     ],
     "Which built-in function can get information from the user": [
-        "input", "get", "print", "write"
+        "Choices:", "input", "get", "print", "write"
     ],
     "Which keyword do you use to loop over a given list of elements": [
-        "for", "while", "each", "loop"
+        "Choices:", "for", "while", "each", "loop"
     ],
     "What's the purpose of the built-in zip() function": [
+        "Choices:", 
         "To iterate over two or more sequences at the same time",
         "To combine several strings into one",
         "To compress several files into one archive",
