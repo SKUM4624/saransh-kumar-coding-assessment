@@ -1,0 +1,1 @@
+This repository hosts an app that I, Saransh Kumar am making for a Digital Technologies assignment where we have to create an educational program or game. I am making a quiz app in Python. This repository contains all the documentary of this app.
