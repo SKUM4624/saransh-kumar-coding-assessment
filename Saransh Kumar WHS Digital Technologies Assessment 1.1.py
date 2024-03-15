@@ -28,7 +28,7 @@ QUESTIONS = {
 }
 
 num_questions = min(NUM_QUESTIONS_PER_QUIZ, len(QUESTIONS))
-questions = random.sample(list(QUESTIONS.items()), k=num_questions)
+questions = random.sample(list(QUESTIONS.items()), k=num_questions) # properly shuffles the questions for every quiz session
 
 num_correct = 0 # score 
 for num, (question, alternatives) in enumerate(questions, start=1): # starts the index with '1' instead of '0', and numbers the questions accordingly.
