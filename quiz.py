@@ -1,58 +1,43 @@
 # quiz.py
 
 # I will be making a quiz program in Python.
-# Will add up to 10 questions.
+# Will have at least 5 questions.
 
 import string
 import random
 from string import ascii_lowercase
 
-NUM_QUESTIONS_PER_QUIZ = 5
+NUM_QUESTIONS_PER_QUIZ = 10
 QUESTIONS = {
-    "When was the first known use of the word 'quiz'": [
-        "1781", "1771", "1871", "1881",
+    "Who is the principal": [
+        "Mr Mcallen", "Mrs DeSchmidt", "Mr Dunn", "Mrs Spooner",
     ],
-    "Which built-in function can get information from the user": [
-        "input", "get", "print", "write",
+    "How many credits do you need to pass NCEA Level 1": [
+        "60", "80", "100", "40",
     ],
     "Which keyword do you use to loop over a given list of elements": [
         "for", "while", "each", "loop",
     ],
-    "What's the purpose of the built-in zip() function": [
-        "To iterate over two or more sequences at the same time",
-        "To combine several strings into one",
-        "To compress several files into one archive",
-        "To get information from the user",
+    "What subject is mandatory to Year 11's": [
+        "English", "Math", "Science", "Chinese",
     ],
-    "What's the name of Python's sorting algorithm": [
-        "Timsort", "Quicksort", "Merge sort", "Bubble sort",
+    "What code editor is free on Windows and is most commonly used": [
+        "Visual Studio Code", "JetBrains", "Notepad++", "PowerShell",
     ],
-    "What does dict.get(key) return if key isn't found in dict": [
-        "None", "key", "True", "False",
+    "What is the most common brand of phone": [
+        "Iphone", "Samsung", "Google Pixel", "Huawei",
     ],
-    "How do you iterate over both indices and elements in an iterable": [
-        "enumerate(iterable)",
-        "enumerate(iterable, start=1)",
-        "range(iterable)",
-        "range(iterable, start=1)",
+    "Who declared war on Ukraine": [
+        "Russia", "Poland", "India", "Saudi Arabia",
     ],
-    "What's the official name of the := operator": [
-        "Assignment expression",
-        "Named expression",
-        "Walrus operator",
-        "Colon equals operator",
+    "What's symbol increases a variables value by 1": [
+        "++", "=+", "+=", "==",
     ],
-    "What's one effect of calling random.seed(42)": [
-        "The random numbers are reproducible.",
-        "The random numbers are more random.",
-        "The computer clock is reset.",
-        "The first random number is always 42.",
+    "What is the proper spelling of this town": [
+        "Wanganui", "Whanganui", "Whaganui", "Whanganoi",
     ],
-    "When does __name__ == '__main__' equal True in a Python file": [
-        "When the file is run as a script",
-        "When the file is imported as a module",
-        "When the file has a valid name",
-        "When the file only has one function",
+    "What two keyboard shortcuts are used to copy paste": [
+        "Ctrl+C and Ctrl+V", "Ctrl+Shift+C and Ctrl+P", "Ctrl+Shift+C and Ctrl+V", "Ctrl+Shift+O and Ctrl+Shift+P",
     ]
 }
 
