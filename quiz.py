@@ -3,6 +3,7 @@
 # I will be making a quiz program in Python.
 # Will have at least 5 questions.
 
+from collections import UserString
 import string
 import random
 from string import ascii_lowercase
@@ -46,12 +47,13 @@ def run_quiz():
         QUESTIONS, num_questions=NUM_QUESTIONS_PER_QUIZ
     )
 
+    user = input("What's your name? ")
     num_correct = 0
     for num, (question, alternatives) in enumerate(questions, start=1): # starts the index with '1' instead of '0', and numbers the questions accordingly.
         print(f"\nQuestion {num}:") 
         num_correct += ask_question(question, alternatives)
 
-    print(f"\nYou got {num_correct} correct out of {num} questions") # declares score when quiz is finished.
+    print(f"\nYou got {num_correct} correct out of {num} questions {user}!") # declares score when quiz is finished.
 
 def prepare_questions(questions, num_questions): 
     num_questions = min(num_questions, len(questions))
@@ -63,10 +65,10 @@ def ask_question(question, alternatives):
 
     answer = get_answer(question, ordered_alternatives)
     if answer == correct_answer:
-        print("⭐ Correct! ⭐")
+        print(f"⭐ Good job! You got it correct! ⭐")
         return 1
     else:
-        print(f"The answer is {correct_answer!r}, not {answer!r}")
+        print(f"Sorry, you got it wrong! The answer is {correct_answer!r}, not {answer!r}!")
         return 0
 
 def get_answer(question, alternatives):
