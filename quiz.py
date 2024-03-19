@@ -7,8 +7,8 @@ import string
 import random
 from string import ascii_lowercase
 
-NUM_QUESTIONS_PER_QUIZ = 10
-QUESTIONS = {
+NUM_QUESTIONS_PER_QUIZ = 10 # constant for the number of questions
+QUESTIONS = { # constant variable
     "Who is the principal": [
         "Mr Mcallen", "Mrs DeSchmidt", "Mr Dunn", "Mrs Spooner",
     ],
@@ -42,24 +42,24 @@ QUESTIONS = {
 }
 
 def run_quiz():
-    questions = prepare_questions(
+    questions = prepare_questions( # defines a variable named questions that combines the questions and number of questions
         QUESTIONS, num_questions=NUM_QUESTIONS_PER_QUIZ
     )
 
     num_correct = 0
-    for num, (question, alternatives) in enumerate(questions, start=1):
-        print(f"\nQuestion {num}:")
+    for num, (question, alternatives) in enumerate(questions, start=1): # starts the index with '1' instead of '0', and numbers the questions accordingly.
+        print(f"\nQuestion {num}:") 
         num_correct += ask_question(question, alternatives)
 
-    print(f"\nYou got {num_correct} correct out of {num} questions")
+    print(f"\nYou got {num_correct} correct out of {num} questions") # declares score when quiz is finished.
 
-def prepare_questions(questions, num_questions):
+def prepare_questions(questions, num_questions): 
     num_questions = min(num_questions, len(questions))
-    return random.sample(list(questions.items()), k=num_questions)
+    return random.sample(list(questions.items()), k=num_questions) # properly shuffles the questions for every quiz session
 
 def ask_question(question, alternatives):
     correct_answer = alternatives[0]
-    ordered_alternatives = random.sample(alternatives, k=len(alternatives))
+    ordered_alternatives = random.sample(alternatives, k=len(alternatives)) # randomizes the choices for each question every session
 
     answer = get_answer(question, ordered_alternatives)
     if answer == correct_answer:
@@ -71,12 +71,12 @@ def ask_question(question, alternatives):
 
 def get_answer(question, alternatives):
     print(f"{question}?")
-    labeled_alternatives = dict(zip(ascii_lowercase, alternatives))
+    labeled_alternatives = dict(zip(ascii_lowercase, alternatives)) # labels all of the multiple choice from A to D
     for label, alternative in labeled_alternatives.items():
-        print(f"  {label}) {alternative}")
+        print(f"  {label}) {alternative}") # prints the question then the alternatives underneath it
 
-    while (answer_label := input("\nChoice? ")) not in labeled_alternatives:
-        print(f"Please answer one of {', '.join(labeled_alternatives)}")
+    while (answer_label := input("\nChoice? ")) not in labeled_alternatives: # asks user to choose a choice
+        print(f"Please answer one of {', '.join(labeled_alternatives)}") # forces the user to choose between the choices if the have typed something else
 
     return labeled_alternatives[answer_label]
 
