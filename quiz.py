@@ -1,5 +1,5 @@
 # quiz.py
-
+# Code to be used for assessment.
 # I will be making a quiz program in Python.
 # Will have at least 5 questions.
 

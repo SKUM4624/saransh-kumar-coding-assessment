@@ -1,4 +1,4 @@
-# quiz.py
+# draft 
 
 # I will be making a quiz program in Python.
 # Will add up to 10 questions.
