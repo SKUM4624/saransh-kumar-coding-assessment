@@ -35,7 +35,7 @@ QUESTIONS = { # constant variable
         "++", "=+", "+=", "==",
     ],
     "What is the proper spelling of this town": [
-        "Wanganui", "Whanganui", "Whaganui", "Whanganoi",
+        "Whanganui", "Wanganui", "Whaganui", "Whanganoi",
     ],
     "What two keyboard shortcuts are used to copy paste": [
         "Ctrl+C and Ctrl+V", "Ctrl+Shift+C and Ctrl+P", "Ctrl+Shift+C and Ctrl+V", "Ctrl+Shift+O and Ctrl+Shift+P",
@@ -48,6 +48,7 @@ def run_quiz():
     )
 
     user = input("What's your name? ")
+    print(f"Ok {user}, there are {NUM_QUESTIONS_PER_QUIZ} questions. Good luck!")
     num_correct = 0
     for num, (question, alternatives) in enumerate(questions, start=1): # starts the index with '1' instead of '0', and numbers the questions accordingly.
         print(f"\nQuestion {num}:") 
