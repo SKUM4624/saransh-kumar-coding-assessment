@@ -44,7 +44,7 @@ QUESTIONS = { # constant variable
 
 def run_quiz():
     questions = prepare_questions( # defines a variable named questions that combines the questions and number of questions
-        QUESTIONS, num_questions=NUM_QUESTIONS_PER_QUIZ
+        QUESTIONS, num_questions = NUM_QUESTIONS_PER_QUIZ
     )
 
     user = input("What's your name? ")
@@ -66,7 +66,7 @@ def ask_question(question, alternatives):
 
     answer = get_answer(question, ordered_alternatives)
     if answer == correct_answer:
-        print(f"⭐ Good job! You got it correct! ⭐")
+        print("⭐ Good job! You got it correct! ⭐")
         return 1
     else:
         print(f"Sorry, you got it wrong! The answer is {correct_answer!r}, not {answer!r}!")
@@ -82,6 +82,3 @@ def get_answer(question, alternatives):
         print(f"Please answer one of {', '.join(labeled_alternatives)}") # forces the user to choose between the choices if the have typed something else
 
     return labeled_alternatives[answer_label]
-
-if __name__ == "__main__":
-    run_quiz()
