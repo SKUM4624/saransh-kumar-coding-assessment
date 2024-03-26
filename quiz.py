@@ -48,7 +48,7 @@ def run_quiz():
     )
 
     user = input("What's your name? ")
-    print(f"Ok {user}, there are {NUM_QUESTIONS_PER_QUIZ} questions. Good luck!")
+    print(f"Ok {user}, there are {NUM_QUESTIONS_PER_QUIZ} questions about random general topics. Good luck!")
     num_correct = 0
     for num, (question, alternatives) in enumerate(questions, start=1): # starts the index with '1' instead of '0', and numbers the questions accordingly.
         print(f"\nQuestion {num}:") 
