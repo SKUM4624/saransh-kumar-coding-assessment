@@ -82,3 +82,5 @@ def get_answer(question, alternatives):
         print(f"Please answer one of {', '.join(labeled_alternatives)}") # forces the user to choose between the choices if the have typed something else
 
     return labeled_alternatives[answer_label]
+
+run_quiz()
